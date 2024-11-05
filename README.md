@@ -32,7 +32,7 @@
 
 1. **Clone the Repository**:
     ```bash
-    git clone git@github.com:geekyfaahad/drive-store.git
+    git clone https://github.com/geekyfaahad/drive-store.git
     cd drive-store
     ```
 
