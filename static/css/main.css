@@ -1,0 +1,335 @@
+
+#login-box {
+  width: 300px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 1px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+  text-align: center;
+}
+
+#login-box input[type="email"],
+#login-box input[type="password"] {
+  width: 230px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: solid;
+  border-radius: 19px;
+  background-color: #8080801f;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border-width: 2px;
+  outline: none;
+}
+
+#login-box input[type="submit"] {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 25px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.head:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+#ii8sn {
+  text-align: center;
+}
+
+.bi.bi-envelope {
+  margin-bottom: -6px;
+}
+
+#ji4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 5px;
+  margin-top: 100px;
+}
+
+#yuu {
+  text-align: right;
+  margin-top: -55px;
+}
+
+#cont {
+  padding: 52.5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/static/img/folder.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #ffffff;
+  cursor: pointer; /* Indicate it's clickable */
+  transition: transform 0.1s ease; /* Smooth transition for transform */
+}
+#cont:active {
+  transform: scale(0.95); /* Scale down slightly on click */
+}
+#files {
+  font-size: larger;
+  color: black;
+  font-weight: 100;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: clip;
+  width: 150px;
+  display: inline-block;
+}
+
+.create {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 6px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+  box-shadow 0.3s ease;
+  border-radius: 25px;
+}
+
+.create:hover {
+  background-color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.19);
+  transform: translateY(-3px);
+}
+
+.create:active {
+  transform: translateY(1px);
+}
+
+.avatar {
+  width: 49px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  border-radius: 30px;
+}
+
+#fff56 {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-gap: 5px;
+	margin-top: 80px;
+}
+
+#file_div {
+	padding: 52.5px;
+	text-align: center;
+	/* border-radius: 18px; */
+	background-image: url("/static/img/1243979.png");
+	background-position: center;
+	opacity: 90%;
+	background-repeat: no-repeat, repeat;
+	background-size: contain;
+}
+#file_div:hover,
+#file_div:focus
+{
+	background-image: url("/static/img/1243979.png");
+	opacity: 1;
+	transform: rotate(-2.5deg);
+	transition: transform 0.3s ease; 
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+#file_title {
+  font-size: larger;
+  color: black;
+  font-weight: 100;
+  margin: 4px;
+  padding-top: 23px;
+  /* padding-bottom: 0; */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: -1.5rem;
+  /* text-align: left; */
+  inline-size: 116px;
+  margin-bottom: -11px;
+}
+button#options{
+	Background-color: rgb(255, 255, 255);
+	color: white;
+	border: 1px solid rgb(248, 250, 255);
+	border-radius:5px;
+}
+button#options::before {
+	content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('/static/img/options.svg');
+    background-size: cover;
+}
+
+.file-input {
+	border: 1px solid #ccc;
+	padding: 1px;
+	font-size: 0.8em;
+	/* margin: 20px; */
+}
+
+.file-input:focus {
+	outline: none;
+	border-color: #6d9eeb;
+}
+
+input#swal2-input{
+  width: 67%;
+  margin: 23px 55px;
+  display: inline-block;
+  border: 1px solid #040404;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+
+/*set styles for the cancel button*/
+.cancelbtn {
+	padding: 14px 20px;
+	background-color: #FF2E00;
+}
+
+/*float cancel and signup buttons and add an equal width*/
+.cancelbtn,
+.signupbtn {
+	float: left;
+	width: 50%
+}
+
+/*add padding to container elements*/
+.container {
+	padding: 16px;
+}
+
+/*define the modal’s background*/
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+	padding-top: 60px;
+}
+
+/*define the modal-content background*/
+
+.myForm {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	border: 1px solid #888;
+	width: 60px;
+}
+
+/*define the close button*/
+
+.close {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+	color: #000;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+/*define the close hover and focus effects*/
+
+.close:hover,
+.close:focus {
+	color: red;
+	cursor: pointer;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+@media screen and (max-width: 600px) {
+
+	.cancelbtn,
+	.signupbtn {
+		width: 100%;
+	}
+}
+
+/* input[type="file"] {
+	display: inline-block;
+} */
+
+.progress {
+	width: 300px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.progress-Bar {
+	background-image: linear-gradient(to bottom, #337ab7 0, #286090 100%);
+}
+
+#upload_form {
+    text-align: center;
+    font-size: 1.3rem;
+}
+.swal2-image {
+margin-bottom: -29px;
+width: 120px;
+height: 119px;
+}
+
+a {
+  text-decoration: none; /* No underline */
+  color: inherit; /* Inherit color from parent */
+}
+
+/* Prevent color change on hover */
+a:hover {
+  color: inherit; /* No color change on hover */
+}
+
+/* Prevent color change on focus */
+a:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Prevent active state color change */
+a:active {
+  color: inherit; /* No color change while active */
+}

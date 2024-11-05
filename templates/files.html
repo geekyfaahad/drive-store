@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ folder_path }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Preload and load Bootstrap with integrity -->
+  <link rel="preload" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" as="style" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <!-- Preload and load custom styles -->
+  <link rel="preload" href="{{ url_for('static', filename='css/main.css') }}" as="style" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" crossorigin="anonymous">
+
+  <!-- Preload scripts -->
+  <link rel="preload" href="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/sweetalert2@11" as="script" crossorigin="anonymous">
+  <link rel="preload" href="{{ url_for('static', filename='js/main.js') }}" as="script" crossorigin="anonymous">
+
+  <!-- Load scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" crossorigin="anonymous" defer></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <div class="headerrr" style="margin-bottom:85px">
+    <button type="button" class="create" onclick="upload_file('{{ folder_path }}')">Upload File</button>
+    <button type="button" class="create" onclick="window.location.href='/folder/delete/{{ folder_path }}'">Delete Folder</button>
+    <a href="/" style="text-decoration:none;">
+      <h1 style="font-family: Times New Roman, Times, serif; color: #000; font-weight: lighter; text-align: center; font-size: 26px; margin-top: -40px; margin-right: -8px;">
+        Drive Store
+      </h1>
+    </a>
+    <div id="yuu" style="margin-top: -46px;">
+      <a href="javascript:profile();">
+        <img src="{{ url_for('static', filename='img/avatar.png') }}" class="avatar" style="float: right;">
+      </a>
+    </div>
+  </div>
+  <!-- End of Header -->
+
+  <!-- File List -->
+  <div id="fff56">
+    {% for filename in files %}
+    <div id="file_div" title="{{ filename }}">
+      <h2 id="file_title">{{ filename }}</h2><br>
+      <button onclick="options('{{ folder_path }}', '{{ filename }}')" id="options"></button>
+    </div>
+    {% endfor %}
+  </div>
+</body>
+</html>
