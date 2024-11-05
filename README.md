@@ -1,4 +1,4 @@
-# Driver Stores
+# Drive Stores
 
 ## Features
 - **User Authentication**: Secure user login and registration via Firebase authentication, with email verification and password reset functionality.
@@ -32,8 +32,8 @@
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/geekyfaahad/driver-store.git
-    cd driver-store
+    git clone git@github.com:geekyfaahad/drive-store.git
+    cd drive-store
     ```
 
 2. **Install Dependencies**:
