@@ -32,7 +32,7 @@
 
 1. **Clone the Repository**:
     ```bash
-    git clone [https://github.com/geekyfaahad/driver-store.git](https://github.com/geekyfaahad/drive-store)
+    git clone https://github.com/geekyfaahad/driver-store.git
     cd driver-store
     ```
 
