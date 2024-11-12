@@ -127,19 +127,27 @@ def folder_delete(folder_path):
     user_dir = os.path.join(app.config['UPLOAD_FOLDER'], session['user'], 'files')
     full_path = os.path.normpath(os.path.join(user_dir, folder_path))
 
-    if not full_path.startswith(user_dir):
-        abort(403) 
-
     if os.path.isdir(full_path):
-        for root, dirs, files in os.walk(full_path, topdown=False):
-            for name in files:
-                os.remove(os.path.join(root, name)) 
-            for name in dirs:
-                os.rmdir(os.path.join(root, name))
-        os.rmdir(full_path) 
-        app.logger.info(f"Directory and all its contents deleted: {full_path}")
-        message=Markup("<script>window.onload = function() { delete_folder(); };</script>")
-        return render_template('profile.html',message=message)
+        try:
+            for root, dirs, files in os.walk(full_path, topdown=False):
+                for name in files:
+                    file_path = os.path.join(root, name)
+                    os.chmod(file_path, 0o777)
+                    os.remove(file_path)
+                for name in dirs:
+                    dir_path = os.path.join(root, name)
+                    os.chmod(dir_path, 0o777) 
+                    os.rmdir(dir_path) 
+            
+            os.chmod(full_path, 0o777)
+            os.rmdir(full_path)
+            
+            app.logger.info(f"Directory and all its contents deleted: {full_path}")
+            message = Markup("<script>window.onload = function() { delete_folder(); };</script>")
+            return render_template('profile.html', message=message)
+        except OSError as e:
+            app.logger.error(f"Error removing directory or contents: {full_path} - {e}")
+            abort(500, description="Internal Server Error: Unable to delete the directory.")
     else:
         app.logger.warning(f"Path not found or not a directory: {full_path}")
         return f"The specified path '{folder_path}' does not exist or is not a directory.", 404
